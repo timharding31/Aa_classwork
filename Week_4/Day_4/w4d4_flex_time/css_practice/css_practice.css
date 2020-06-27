@@ -1,0 +1,39 @@
+/* 
+Given a pre-filled HTML skeleton, write CSS selectors to add specific styles to specific html tags, classes, and ids
+
+Given an HTML skeleton, utilize the > selector in CSS 
+
+Use the :last-child selector to give the last item in a list 
+
+Use the + selector to select the first sibling element of the h1 tag (adjacent sibling selector)
+*/
+
+/* . are class selectors, whilte # are id selectors */
+
+.top-level {
+  border: 1px solid red;
+}
+
+.inner-level {
+  border: 1px solid blue;
+}
+/* 
+.top-level li {
+  color: green;
+} */
+
+/* .top-level > li {
+  color: green;
+} */
+
+/* .inner-level li:last-child {
+  color: purple;
+} */
+
+/* h1 + p {
+  color: pink;
+} */
+
+/* h1 ~ p {
+  color: green;
+} */
