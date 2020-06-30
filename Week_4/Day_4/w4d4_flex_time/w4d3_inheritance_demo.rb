@@ -47,6 +47,7 @@ parent = Animal.new("parent", 50)
 doggie = Dog.new("doggie", 3, "big")
 puppy = Pupper.new("puppy", 1)
 
-# p (Animal.instance_methods - Object.instance_methods).count
-# p (Dog.instance_methods - Object.instance_methods)
-p (Pupper.instance_methods - Object.instance_methods)
+p (Animal.instance_methods - Object.instance_methods).count
+p (Dog.instance_methods - Object.instance_methods).count    
+p (Pupper.instance_methods - Object.instance_methods).count 
+

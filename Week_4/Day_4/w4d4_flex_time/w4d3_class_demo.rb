@@ -25,13 +25,22 @@ end
 
 module Orphan
     def walk
+        # super 
+        puts "walking"
+    end
+end 
+
+module OrphanTwo
+    def walk
+        # super 
         puts "walking"
     end
 end 
 
 class Child < Parent
-    # include Orphan
-    prepend Orphan
+    include Orphan
+    include OrphanTwo
+    # prepend Orphan
 
     def initialize(name, age)
         super(name) 
@@ -40,15 +49,16 @@ class Child < Parent
 
 
     def scream
-        # self.yell
-        yell
+        self.yell
+        # yell
     end
 
     def talk
-        # self.whisper 
-        whisper
+        self.whisper 
+        # whisper
     end
 
+    
     def parent_yell
         p = Parent.new("Vanessa")
         p.yell
@@ -56,7 +66,7 @@ class Child < Parent
 
     def walk
         puts 'not walking'
-        super
+        p super
     end
 
 end
@@ -102,7 +112,7 @@ p Child.ancestors
 
 #------prepend module------
 # Q: what happens when you call child#walk without super?
-p child.walk
+# p child.walk
 # p Child.ancestors
 
 # Q: with call to super, what happens when you call child#walk?
